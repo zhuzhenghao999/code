@@ -17,7 +17,7 @@ r = Best_score(1);u = Best_score(2) ;N =Best_score(3);
 
 %% 导入数据
 
-%设置季节 k =1,2,3,4 (春夏秋冬）（以及Obj_SFIGNGBM(x)季节）
+%设置季节 k =1,2,3,4 (春夏秋冬）（以及Obj_SFIGNGBM()季节）
 k = 2;
 A = readmatrix("数据0129.xlsx",'Sheet','USA','Range','B2:B31');
 for i = 1:8
@@ -44,6 +44,7 @@ B = (1-N).*[-Zy;R;ones(1,n-1)];
 C = pinv(B*B')*B*Yr';
 % 设置预测步长
 step = 2;
+% 预测
 X_1 = predict_data(A2, C, Best_score, step);
 for i = 1:n
 APE(i) = abs(X_1(i)-A1(i))/A1(i);

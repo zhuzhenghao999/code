@@ -8,7 +8,7 @@ dim = 3;               % 优化参数个数
 lb = [0,   0,  0];       % 下限
 ub = [10, 10,  10];       % 上限
 load('data.mat');
-step = 2;
+step = 2;                %预测步长
 groupSize = 4;
 data;
 padding = mod(length(data), groupSize);

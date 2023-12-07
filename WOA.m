@@ -98,7 +98,7 @@ while t<Max_iter
     end
     t=t+1;
     curve(t)=Best_Cost;
-    [t Best_Cost]
+    [t Best_Cost];
 end
 
 

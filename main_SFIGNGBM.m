@@ -105,16 +105,4 @@ end
 % 计算平均 MAPE
 averageMape = mean(mapeValues)*100;
 
-% 绘制原始数据和预测数据
-figure;
-plot(originalData, '-o', 'LineWidth', 2, 'DisplayName', 'Original Data');
-hold on;
-plot(data_2, '-s', 'LineWidth', 2, 'DisplayName', 'Predicted Data');
-hold off;
 
-% 添加图例和标题
-legend('Location', 'best');
-title(['Comparison of Original and Predicted Data (Average MAPE: ', num2str(averageMape), '%)']);
-xlabel('Time');
-ylabel('Value');
-grid on;
